@@ -1,0 +1,1 @@
+# Emare Code - Core Module

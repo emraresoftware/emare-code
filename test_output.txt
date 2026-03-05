@@ -1,0 +1,24 @@
+Testing template system...
+✅ Generated 344 characters
+
+Code preview:
+--------------------------------------------------
+"""Emare Code Project — my_app"""
+import platform
+import sys
+from pathlib import Path
+
+
+def main():
+    """Ana fonksiyon."""
+    print(f"🚀 my_app çalışıyor...")
+    print(f"Platform: {platform.system()} {platform.release()}")
+    print(f"Python: {sys.version}")
+    
+    # TODO: Proje mantığı buraya
+    
+
+if __name__ == "__main__":
+    main()
+
+--------------------------------------------------
