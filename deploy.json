@@ -1,0 +1,28 @@
+{
+  "_comment": "EmareCloud Deploy Manifesti — Bu dosya EmareCloud paneli tarafından okunur. Manuel değiştirme.",
+  "slug": "emarecode",
+  "name": "Emare Code",
+  "github_repo": "emraresoftware/emarecode",
+  "branch": "main",
+  "dc": "local",
+  "server_host": "",
+  "server_ssh_port": 22,
+  "remote_path": "/opt/emarecode",
+  "stack": "python-gunicorn",
+  "port": 8327,
+  "webroot": "/opt/emarecode",
+  "domain": "",
+  "pre_deploy": [],
+  "deploy_commands": [
+    "cd /opt/emarecode",
+    "git pull origin main",
+    "source venv/bin/activate",
+    "pip install -r requirements.txt --quiet",
+    "systemctl restart emarecode"
+  ],
+  "restart_command": "systemctl restart emarecode",
+  "health_check_url": "http://localhost:8327",
+  "webhooks_enabled": true,
+  "auto_deploy_on_push": true,
+  "notify_on_fail": true
+}
